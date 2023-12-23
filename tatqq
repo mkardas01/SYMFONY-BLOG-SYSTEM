@@ -1,0 +1,155 @@
+[33mcommit d5a1d97cec72b57ecec5c754bb54f564b259fa7f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Sun Oct 22 22:19:58 2023 +0200
+
+    notification pusher
+
+[33mcommit 8a8523e60f370f693fd40fa38bccf9fa77d7fcef[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Sun Oct 22 21:43:59 2023 +0200
+
+    new post = send email to users
+
+[33mcommit c30da38b60b05ba80438790cb363a4694d8a7593[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Sun Oct 22 21:11:49 2023 +0200
+
+    search bar/edit delete security
+
+[33mcommit 4315cca6b094afb25723e4783646a644e594179d[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Sun Oct 22 18:27:19 2023 +0200
+
+    post sort
+
+[33mcommit 709f194acb0396e5978aa0001d373e6eca5cdabe[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Sun Oct 22 17:52:46 2023 +0200
+
+    like dislike posts
+
+[33mcommit 43baa97b71067f66f1e96e24fb0ec5293983d3ac[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Sun Oct 22 15:51:04 2023 +0200
+
+    like, dislike logic
+
+[33mcommit 54d36b758dd2c5a313b82f5f4daa3f128c5e5eb9[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Sun Oct 22 15:03:16 2023 +0200
+
+    following system
+
+[33mcommit 571bec6c2dbd5d1dac7be1c48da1074d1157745e[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Sun Oct 22 13:34:43 2023 +0200
+
+    change profile pic
+
+[33mcommit 5f24a1d6c0b5f1beb73b45003e2b6968d5465c02[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Sat Oct 21 14:45:09 2023 +0200
+
+    config forms
+
+[33mcommit 108af526c246390e8c35c15a814daac4b626d668[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Sat Oct 21 01:13:12 2023 +0200
+
+    edit posts, find users posts
+
+[33mcommit 9243a1036e63cf915d334715dd8c05ba18f81717[m[33m ([m[1;32mload-posts[m[33m)[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Sat Oct 21 00:20:07 2023 +0200
+
+    loading posts
+
+[33mcommit c229348829697f9d3712c14d098f55978b8e1e4f[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Fri Oct 20 23:29:29 2023 +0200
+
+    fake posts created
+
+[33mcommit a0de359c3ae49171d7e6c421bd976cf1e99808f5[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Thu Oct 19 21:00:00 2023 +0200
+
+    profile picture
+
+[33mcommit 8e2cf290a1f2de02b2fb9ed16c133a82d3c878ef[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Thu Oct 19 20:35:01 2023 +0200
+
+    validation
+
+[33mcommit ba1f6f04204043a1f9657b424ee344beca769f9b[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Thu Oct 19 18:44:49 2023 +0200
+
+    login/register system
+
+[33mcommit 1fe538c6543bda1604d93dceb9c17576d5c2dd34[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Wed Oct 18 12:18:33 2023 +0200
+
+    translation
+
+[33mcommit b89938ce05cbb8b393c17ca84d80c999a9a1fc7b[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Wed Oct 18 11:13:13 2023 +0200
+
+    code styling
+
+[33mcommit fe283f00357bb0b6da63c7fae710dbb3f8cc860b[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Tue Oct 17 15:30:46 2023 +0200
+
+    dashboard component java scripts
+
+[33mcommit 14d3422a32205810804c445ace9f5e65418871f9[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Tue Oct 17 13:57:01 2023 +0200
+
+    dashboard controller
+
+[33mcommit 417cd460638488bd110e535c1d3151135b899313[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Tue Oct 17 13:32:32 2023 +0200
+
+    new posts
+
+[33mcommit de2661a3c487044d573ced096f32899b51840431[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Tue Oct 17 12:46:36 2023 +0200
+
+    post details
+
+[33mcommit 244d9362086cc2558d6866f32f45dd467dc69211[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Tue Oct 17 12:18:10 2023 +0200
+
+    posts area
+
+[33mcommit ffda1f165d762d6a59018c5f64966f26b46015a5[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Mon Oct 16 23:41:49 2023 +0200
+
+    notification and footer
+
+[33mcommit 38178acdb1c8c12ee93833b84de17d7e9f2c86cf[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Mon Oct 16 21:33:04 2023 +0200
+
+    menu bar
+
+[33mcommit ba966061461a6b1cd5d5f85abcac0969f97e8af5[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Mon Oct 16 20:31:51 2023 +0200
+
+    config
+
+[33mcommit f4e1e71c46974900524bd53cacb857ee8487690a[m
+Author: Mateusz Kardas <kardas-mateusz@wp.pl>
+Date:   Mon Oct 16 19:53:02 2023 +0200
+
+    Files add

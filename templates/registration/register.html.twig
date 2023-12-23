@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+    <div class="m-auto text-center py-12 border-gray-200">
+            <h1 class="text-6xl pt-12 pb-8">
+                Register
+            </h1>
+            {{ form_start(registrationForm) }}
+
+                {{ form_label(registrationForm.name, 'Login') }} {# name #}
+                {{ form_widget(registrationForm.name, {'attr': {'class': 'border rounded-md'}}) }}
+                <span class="text-red-500 mb-5">
+                    {{ form_errors(registrationForm.name, {'attr': {'class': 'text-red-500'}}) }}
+                </span>
+
+                {{ form_label(registrationForm.email, 'Email') }} {# email #}
+                {{ form_widget(registrationForm.email, {'attr': {'class': 'border rounded-md'}}) }}
+                 <span class="text-red-500 mb-5">
+                     {{ form_errors(registrationForm.email) }}
+                 </span>
+
+
+                {{ form_label(registrationForm.plainPassword, 'Password') }}{# password #}
+                {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'border rounded-md'}}) }}
+                <span class="text-red-500 mb-5">
+                    {{ form_errors(registrationForm.plainPassword) }}
+                </span>
+
+                {{ form_row(registrationForm.agreeTerms, {'attr': {'class':'my-5'}}) }}
+
+
+        {% if not registrationForm.vars.valid %}
+                    <ul class="mt-2 text-sm text-red-600 space-y-1">
+                        {% for error in registrationForm.vars.errors %}
+                            <li>{{ error.message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+
+
+        <button type="submit" class="uppercase mt-15 bg-blue-500 text-gray-100
+                text-lg  font-extrabold py-4 px-4 rounded-3xl hover:bg-blue-800
+                transition duration-150 ease-in-out">
+                    Register
+                </button>
+            {{ form_end(registrationForm) }}
+
+            {{ form_errors(registrationForm) }}
+
+    </div>
+{% endblock %}

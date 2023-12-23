@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="py-12 mt-10">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900"
+                     x-data="{ tab :1 }">
+                    You're logged in!
+                    <a class="hover:text-indigo-600 py-2 cursor-pointer" href="{{ path('app_profile') }}">Click here to view your profile information</a>
+                    <div class="mt-6">
+                        <div class="flex mx-2 mb-4 space-x-4 text-xl border-b border-gray-300">
+                            <div @click="tab = 1"
+                                 :class="{'text-indigo-600 border-b border-indigo-600': tab === 1}"
+                                 class="hover:text-indigo-600 py-2 cursor-pointer">
+                                Followers
+                            </div>
+                            <div @click="tab = 2"
+                                 :class="{'text-indigo-600 border-b border-indigo-600': tab === 2}"
+                                 class="hover:text-indigo-600 py-2 pl-2 cursor-pointer">
+                                Following
+                            </div>
+                            <div @click="tab = 3"
+                                 :class="{'text-indigo-600 border-b border-indigo-600': tab === 3}"
+                                 class="hover:text-indigo-600 py-2 pl-2 cursor-pointer">
+                                Liked Posts
+                            </div>
+                        </div>
+                        <div x-show="tab === 1"
+                             x-transition:enter="transition ease-out duration-300"
+                             x-transition:enter-start="opacity-0 scale-90"
+                             x-transition:enter-end="opacity-100 scale-100">
+                            <b>People that follow you:</b>
+                            <ul>
+                                {% for follower in app.user.getFollowers() %}
+                                    <li>
+                                        <a class="hover:text-stone-500" href="{{ path('posts.user',{id: follower.id}) }}">
+                                            {{ follower.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div x-show="tab === 2"
+                             x-transition:enter="transition ease-out duration-300"
+                             x-transition:enter-start="opacity-0 scale-90"
+                             x-transition:enter-end="opacity-100 scale-100">
+                            <b>People that you follow:</b>
+                            <ul class="space-y-4">
+                                <li>
+                                    {% for following in app.user.getFollowing() %}
+                                        <a class="hover:text-stone-500" href="{{ path('posts.user', { id: following.id }) }}">
+                                            {{ following.name }}
+                                        </a>
+                                    <a href="{{ path('toggleFollow', { user: following.id }) }}" class="ml-3 inline font-bold text-sm px-4 py-1 text-white rounded bg-blue-500 hover:bg-blue-600">
+                                        {% trans %}Unfollow{% endtrans %}
+                                    </a>
+                                    {% endfor %}
+                                </li>
+                            </ul>
+                        </div>
+                        <div x-show="tab === 3"
+                             x-transition:enter="transition ease-out duration-300"
+                             x-transition:enter-start="opacity-0 scale-90"
+                             x-transition:enter-end="opacity-100 scale-100">
+                            <b>Posts you liked:</b>
+                            <ul class="list-disc">
+                                {% for post in app.user.getLikedPosts() %}
+                                    <li>
+                                        <a class="hover:text-stone-500" href="{{ path('posts.show', { id: post.id }) }}">{{ post.title }}</a>
+                                    </li>
+
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

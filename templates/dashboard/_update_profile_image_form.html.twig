@@ -1,0 +1,43 @@
+<section>
+    <header @click="tab = '2'; localStorage.setItem('tabProfile', '2')">
+        <h2 class="text-lg font-medium text-gray-900">Profile Image</h2>
+
+        <p class="mt-1 text-sm text-gray-600">Update your profile image</p>
+    </header>
+
+    <div x-show="tab === '2'"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100">
+        <img class="object-cover h-32 w-32" src="{{ asset('images/' ~ app.user.image.path ?? 'default-avatar.png')  }}" alt="profile image" />
+
+        {{ form_start(imageForm, {'attr': {'class': 'p-4'}}) }}
+
+            <label class="block mb-4">
+                <span class="sr-only">Choose File</span>
+                {{ form_widget(imageForm.imageFile, {'attr': {'class': 'block w-full text-sm text-gray-500
+                file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold
+                file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100'}}) }}
+                {% if imageForm.imageFile.vars['errors']|length > 0  %}
+                    <p class="text-red-600 text-sm">
+                        {% for error in imageForm.imageFile.vars['errors'] %}
+                            <span>{{ error.message }}</span>
+                        {% endfor %}
+                    </p>
+                {% endif %}
+            </label>
+            <div class="flex items-center gap-4">
+                <button type="submit" class="px-4 py-2 text-sm text-white bg-indigo-600 rounded">
+                    Submit
+                </button>
+                {% for message in app.flashes('status-image') %}
+                    {% if message == 'image-updated' %}
+                        <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)" class="text-sm text-gray-600">
+                             Saved
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {{ form_end(imageForm) }}
+    </div>
+</section>
